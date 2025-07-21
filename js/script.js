@@ -111,3 +111,86 @@ document.addEventListener('DOMContentLoaded', function() {
         header.classList.toggle('sticky', window.scrollY > 0);
     });
 });
+
+
+
+// achivment section
+
+// Animate achievement statistics counting
+function animateStats() {
+    const statNumbers = document.querySelectorAll('.stat-number');
+    
+    statNumbers.forEach(stat => {
+        const target = parseInt(stat.getAttribute('data-count'));
+        const duration = 2000; // Animation duration in ms
+        const step = target / (duration / 16); // 60fps
+        
+        let current = 0;
+        const counter = setInterval(() => {
+            current += step;
+            if (current >= target) {
+                clearInterval(counter);
+                current = target;
+            }
+            stat.textContent = Math.floor(current);
+        }, 16);
+    });
+}
+
+// Initialize when achievements section is in view
+const achievementsSection = document.querySelector('.achievements');
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateStats();
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+if (achievementsSection) {
+    observer.observe(achievementsSection);
+}
+
+// footer
+
+
+// Footer Animation
+const footer = document.querySelector('.footer');
+const footerObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            footer.classList.add('animate');
+            footerObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.1 });
+
+if (footer) {
+    footerObserver.observe(footer);
+}
+
+// Set current year in copyright
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Newsletter form submission
+const newsletterForm = document.querySelector('.newsletter-form');
+if (newsletterForm) {
+    newsletterForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const submitButton = this.querySelector('button');
+        const originalText = submitButton.innerHTML;
+        
+        submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        
+        // Simulate form submission
+        setTimeout(() => {
+            submitButton.innerHTML = '<i class="fas fa-check"></i> Subscribed!';
+            this.reset();
+            
+            setTimeout(() => {
+                submitButton.innerHTML = originalText;
+            }, 2000);
+        }, 1500);
+    });
+}
