@@ -53,7 +53,8 @@ document.addEventListener('DOMContentLoaded', function() {
         { id: 6, category: 'portrait', imgUrl: 'https://images.unsplash.com/photo-1488161628813-04466f872be2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80' },
         { id: 7, category: 'event', imgUrl: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80' },
         { id: 8, category: 'nature', imgUrl: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1548&q=80' },
-        { id: 9, category: 'wedding', imgUrl: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80' }
+        { id: 9, category: 'wedding', imgUrl: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80' },
+        { id: 10, category: 'event', imgUrl: 'https://scontent.fdac31-2.fna.fbcdn.net/v/t39.30808-6/518305196_777109704642937_3231936619121145322_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=MtvN4eare7gQ7kNvwHP_Zyh&_nc_oc=Adn6aKrQ_VoUNg9iIoHuEwSWqVMJB17C92AA5RICepRP1OSSOpNJcjCGgXKllX9v3gA&_nc_zt=23&_nc_ht=scontent.fdac31-2.fna&_nc_gid=nhgT2CtGU4FyXW5Vnu1I-g&oh=00_AfR7cFKr97co82QZg7kAmRIDJNn0iUYa61b8iOSwUIiN8w&oe=688C499C' }
     ];
 
     // Function to render gallery items
