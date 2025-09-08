@@ -1,0 +1,13 @@
+[
+    {"id":1,"category":"wedding","imgUrl":"../img/Logo.png","title":"Traditional Bengali wedding"},
+    {"id":2,"category":"wedding","imgUrl":"../img/My photo.jpg","title":"Vibrant holud night"},
+    {"id":3,"category":"wedding","imgUrl":"../img/wedding3.jpg","title":"Golden hour romance"},
+    {"id":4,"category":"portrait","imgUrl":"../img/portrait1.jpg","title":"Heartwarming family session"},
+    {"id":5,"category":"portrait","imgUrl":"../img/portrait2.jpg","title":"Professional business portrait"},
+    {"id":6,"category":"event","imgUrl":"../img/event1.jpg","title":"Dynamic event coverage"},
+    {"id":7,"category":"event","imgUrl":"../img/event2.jpg","title":"Festive party moments"},
+    {"id":8,"category":"nature","imgUrl":"../img/nature1.jpg","title":"Breathtaking nature vista"},
+    {"id":9,"category":"nature","imgUrl":"../img/nature2.jpg","title":"National park wilderness"},
+    {"id":10,"category":"drone","imgUrl":"../img/drone1.jpg","title":"Drone shot of wedding venue"},
+    {"id":11,"category":"drone","imgUrl":"../img/drone2.jpg","title":"Aerial view of Sylhet hills"}
+]

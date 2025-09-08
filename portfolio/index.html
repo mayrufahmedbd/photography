@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Nazmul Photography</title>
+    <link rel="icon" href="../img/Logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"><a href="/">Nazmul Photography</a></div>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/portfolio">Portfolio</a></li>
+                    <li><a href="../services.html">Services</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../achievements.html">Achievement</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2>Our Portfolio</h2>
+            <p>Explore our diverse collection of photographs. Click any image to view it in a lightbox.</p>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="wedding">Wedding</button>
+                <button class="filter-btn" data-filter="portrait">Portrait</button>
+                <button class="filter-btn" data-filter="event">Event</button>
+                <button class="filter-btn" data-filter="nature">Nature</button>
+                <button class="filter-btn" data-filter="drone">Drone</button>
+            </div>
+            <div class="gallery"></div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="achievements">
+        <div class="container">
+            <h2>Achievements</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-icon"><i class="fas fa-trophy"></i></div>
+                    <div class="achievement-content">
+                        <h3>Best Photographer Award</h3>
+                        <p class="achievement-meta">National Photography Society</p>
+                    </div>
+                    <div class="achievement-year">2023</div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon"><i class="fas fa-camera"></i></div>
+                    <div class="achievement-content">
+                        <h3>Top Wedding Photographer</h3>
+                        <p class="achievement-meta">Sylhet Photography Circle</p>
+                    </div>
+                    <div class="achievement-year">2022</div>
+                </div>
+            </div>
+            <div class="achievements-stats">
+                <div class="stat-item">
+                    <div class="stat-number" data-count="120">0</div>
+                    <div class="stat-label">Weddings</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="300">0</div>
+                    <div class="stat-label">Portraits</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="50">0</div>
+                    <div class="stat-label">Events</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28..." class="fill-accent"></path>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <div class="footer-logo">Nazmul Photography</div>
+                    <p>Capturing life's most precious moments with artistry and passion.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col footer-links">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="/portfolio"><i class="fas fa-chevron-right"></i> Portfolio</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-contact">
+                    <h3 class="footer-heading">Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Sylhet</li>
+                        <li><i class="fas fa-phone"></i> +880 1630-410475</li>
+                        <li><i class="fas fa-envelope"></i> nazmulislam01708@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">&copy; <span id="year"></span> Nazmul Photography. All rights reserved.</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox2 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+    
+    <!-- Main JS -->
+    <script src="script.js"></script>
+</body>
+</html>
