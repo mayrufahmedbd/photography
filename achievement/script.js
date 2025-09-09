@@ -41,26 +41,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // achivment section
 
-// Animate achievement statistics counting
-function animateStats() {
-    const statNumbers = document.querySelectorAll('.stat-number');
-    
-    statNumbers.forEach(stat => {
-        const target = parseInt(stat.getAttribute('data-count'));
-        const duration = 2000; // Animation duration in ms
-        const step = target / (duration / 16); // 60fps
-        
-        let current = 0;
-        const counter = setInterval(() => {
-            current += step;
-            if (current >= target) {
-                clearInterval(counter);
-                current = target;
-            }
-            stat.textContent = Math.floor(current);
-        }, 16);
-    });
-}
 
 // Initialize when achievements section is in view
 const achievementsSection = document.querySelector('.achievements');
