@@ -26,7 +26,9 @@ body {
     padding: 0 20px;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     margin-bottom: 20px;
     font-weight: 300;
 }
@@ -85,11 +87,12 @@ section {
 
 /* Header & Navigation */
 header {
-    background: #fff;
+    /* background: rgba(0, 0, 0, 0.1); */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
     z-index: 1000;
+    backdrop-filter: blur(10px);
 }
 
 nav {
@@ -117,11 +120,18 @@ nav {
 .nav-links a {
     font-size: 1rem;
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    color: #ff0000;
+    text-shadow: 2px 2px 4px hsla(0, 100%, 73%, 0.377);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
 }
 
 .nav-links a:hover {
     color: var(--accent-color);
+    text-shadow: 2px 2px 4px hsl(0, 0%, 0%);
 }
 
 .burger {
@@ -140,8 +150,8 @@ nav {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: linear-gradient(var(--overlay-color), var(--overlay-color)), 
-                url('https://images.unsplash.com/photo-1505935428862-770b6f24f629?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1467&q=80') no-repeat center center/cover;
+    background: linear-gradient(var(--overlay-color), var(--overlay-color)),
+        url('/img/main-bg.jpg') no-repeat center center/cover;
     color: #fff;
     display: flex;
     align-items: center;
@@ -188,7 +198,8 @@ nav {
     transition: all 0.3s ease;
 }
 
-.filter-btn.active, .filter-btn:hover {
+.filter-btn.active,
+.filter-btn:hover {
     background: var(--accent-color);
     color: #fff;
     border-color: var(--accent-color);
@@ -270,9 +281,10 @@ nav {
     margin-bottom: 20px;
 }
 
-.service-card i:hover{
+.service-card i:hover {
     color: #222;
 }
+
 .service-card h3 {
     font-size: 1.5rem;
 }
@@ -298,7 +310,7 @@ nav {
     -o-transition: all .5s ease;
 }
 
-.about-image img:hover{
+.about-image img:hover {
     transform: calc(1.3);
     -webkit-transform: calc(1.3);
     -moz-transform: calc(1.3);
@@ -433,16 +445,16 @@ nav {
     .achievements-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .achievement-card {
         flex-direction: column;
     }
-    
+
     .achievement-icon {
         margin-right: 0;
         margin-bottom: 20px;
     }
-    
+
     .achievements-stats {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -546,6 +558,7 @@ footer {
         opacity: 0;
         transform: translateY(-50px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -557,6 +570,7 @@ footer {
         opacity: 0;
         transform: translateY(50px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -609,9 +623,11 @@ footer {
 .toggle .line1 {
     transform: rotate(-45deg) translate(-5px, 6px);
 }
+
 .toggle .line2 {
     opacity: 0;
 }
+
 .toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
 }
@@ -652,7 +668,7 @@ footer {
 }
 
 .footer-about p {
-    color: rgba(255,255,255,0.7);
+    color: rgba(255, 255, 255, 0.7);
     line-height: 1.8;
     margin-bottom: 25px;
 }
@@ -683,7 +699,7 @@ footer {
 }
 
 .footer-col a {
-    color: rgba(255,255,255,0.7);
+    color: rgba(255, 255, 255, 0.7);
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
@@ -720,7 +736,7 @@ footer {
 }
 
 .social-icon {
-    width:  50px;
+    width: 50px;
     height: 50px;
     display: flex;
     align-items: center;
@@ -746,7 +762,7 @@ footer {
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255,255,255,0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding: 30px 0;
     display: flex;
     flex-direction: column;
@@ -755,7 +771,7 @@ footer {
 }
 
 .copyright {
-    color: rgba(255,255,255,0.5);
+    color: rgba(255, 255, 255, 0.5);
     margin-bottom: 15px;
 }
 
@@ -765,7 +781,7 @@ footer {
 }
 
 .legal-links a {
-    color: rgba(255,255,255,0.5);
+    color: rgba(255, 255, 255, 0.5);
     transition: all 0.3s ease;
 }
 
@@ -779,17 +795,26 @@ footer {
         grid-template-columns: 1fr;
         gap: 30px;
     }
-    
+
     .footer-col {
         margin-bottom: 30px;
     }
-    
+
     .footer-newsletter {
         margin-bottom: 30px;
     }
-    
+
     .legal-links {
         flex-direction: column;
         gap: 10px;
     }
 }
+
+
+
+
+
+
+
+/* Loader */
+

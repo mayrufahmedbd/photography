@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Form</title>
+    <link rel="icon" href="../img/Logo.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fdf6f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .booking-form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+        .booking-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #d4a373;
+        }
+        .booking-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .booking-form input,
+        .booking-form select,
+        .booking-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        .booking-form textarea {
+            resize: vertical;
+        }
+        .booking-form button {
+            width: 100%;
+            padding: 12px;
+            background-color: #d4a373;
+            color: white;
+            border: none;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .booking-form button:hover {
+            background-color: #b57a4f;
+        }
+    </style>
+</head>
+<body>
+    <form class="booking-form" action="https://api.web3forms.com/submit" method="POST">
+        <h2>Booking Form</h2>
+
+        <input type="hidden" name="access_key" value="26a2e411-1d75-4196-a053-77fe8c8227d6">
+
+        <input type="hidden" name="Nazmul photography" value="Booking Form">
+
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Your full name*" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Your phone number*" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Your Gmail*" required>
+        
+        <label for="guests">Number of Guests</label>
+        <input type="number" id="guests" name="guests" placeholder="Approximate number of guests*" min="1" required>
+
+        <label for="date">Wedding Date</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="venue">Venue Preference</label>
+        <select id="venue" name="venue" required>
+            <option value="">Select Venue</option>
+            <option value="Wedding">Wedding</option>
+            <option value="Holud">Holud</option>
+            <option value="Wedding + Holud">Wedding + Holud</option>
+            <option value="Outdoor">Outdoor</option>
+        </select>
+
+        <label for="requests">Special Requests / Notes</label>
+        <textarea id="requests" name="requests" rows="4" placeholder="Any special requests or notes..."></textarea>
+
+        <button type="submit">Book Now</button>
+    </form>
+</body>
+</html>
