@@ -149,8 +149,7 @@ nav {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background:
-     /* linear-gradient(var(--overlay-color), var(--overlay-color)), */
+    background: linear-gradient(var(--overlay-color), var(--overlay-color)),
         url('/img/nature\ \(9\).jpg') no-repeat center center/cover;
     color: #fff;
     display: flex;
