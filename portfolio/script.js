@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
             div.setAttribute('data-category', item.category);
             div.innerHTML = `
                 <a href="${item.imgUrl}" data-lightbox="gallery" data-title="${item.title}">
-                    <img src="${item.imgUrl}" alt="${item.title}">
+                    <img src="${item.imgUrl}"loading="lazy" alt="${item.title}">
                 </a>
                 <p>${item.title}</p>
             `;
