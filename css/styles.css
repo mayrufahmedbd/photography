@@ -106,6 +106,11 @@ nav {
     font-size: 1.8rem;
     font-weight: 700;
     color: var(--accent-color);
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
 }
 
 .nav-links {
@@ -121,7 +126,7 @@ nav {
     font-size: 1rem;
     font-weight: 500;
     transition: all 0.3s ease;
-    color: #ff0000;
+    color: var(--accent-color);
     text-shadow: 2px 2px 4px hsla(0, 100%, 73%, 0.377);
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -129,8 +134,9 @@ nav {
     -o-transition: all 0.3s ease;
 }
 
-.nav-links a:hover {
-    color: var(--accent-color);
+nav a:hover {
+    color: var(--dark-color);
+    text-shadow: 0 0 3px var(--accent-color);
 }
 
 .burger {
@@ -141,14 +147,14 @@ nav {
 .burger div {
     width: 25px;
     height: 3px;
-    background: red;
+    background: var(--accent-color);
     margin: 5px;
     transition: all 0.3s ease;
 }
 
 /* Hero Section */
 .hero {
-    height: 100dvh;
+    height: 100vh;
     background: linear-gradient(var(--overlay-color), var(--overlay-color)),
         url('/img/nature (5).webp') no-repeat center center/cover;
     color: #fff;
@@ -582,7 +588,7 @@ footer {
         position: absolute;
         right: 0;
         top: 80px;
-        background: #ffffffc0;
+        background: #fff;
         width: 100%;
         flex-direction: column;
         align-items: center;

@@ -104,7 +104,11 @@ nav {
     font-size: 1.8rem;
     font-weight: 700;
     color: var(--accent-color);
-
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
 }
 
 .nav-links {
@@ -120,7 +124,7 @@ nav {
     font-size: 1rem;
     font-weight: 500;
     transition: all 0.3s ease;
-    color: #ff0000;
+    color: var(--accent-color);
     text-shadow: 2px 2px 4px hsla(0, 100%, 73%, 0.377);
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -128,8 +132,9 @@ nav {
     -o-transition: all 0.3s ease;
 }
 
-.nav-links a:hover {
-    color: var(--accent-color);
+nav a:hover {
+    color: var(--dark-color);
+    text-shadow: 0 0 3px var(--accent-color);
 }
 
 .burger {
