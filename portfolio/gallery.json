@@ -1,52 +1,37 @@
 [
-    {"id":1,"category":"drone","imgUrl":"../img/drone (1).jpg","title":"Drone shot of drone"},
-    {"id":2,"category":"drone","imgUrl":"../img/drone (2).jpg","title":"Drone shot of drone"},
-    {"id":3,"category":"drone","imgUrl":"../img/drone (3).jpg","title":"Drone shot of drone"},
-    {"id":4,"category":"drone","imgUrl":"../img/drone (4).jpg","title":"Drone shot of drone"},
-    {"id":5,"category":"drone","imgUrl":"../img/drone (5).jpg","title":"Drone shot of drone"},
-    {"id":6,"category":"drone","imgUrl":"../img/drone (6).jpg","title":"Drone shot of drone"},
-    {"id":7,"category":"drone","imgUrl":"../img/drone (7).jpg","title":"Drone shot of drone"},
-    {"id":8,"category":"drone","imgUrl":"../img/drone (8).jpg","title":"Drone shot of drone"},
-    {"id":9,"category":"drone","imgUrl":"../img/drone (9).jpg","title":"Drone shot of drone"},
-    {"id":10,"category":"drone","imgUrl":"../img/drone (10).jpg","title":"Drone shot of drone"},
-    {"id":11,"category":"drone","imgUrl":"../img/drone (11).jpg","title":"Drone shot of drone"},
-    {"id":12,"category":"drone","imgUrl":"../img/drone (12).jpg","title":"Drone shot of drone"},
-    {"id":13,"category":"drone","imgUrl":"../img/drone (13).jpg","title":"Drone shot of drone"},
-    {"id":14,"category":"drone","imgUrl":"../img/drone (14).jpg","title":"Drone shot of drone"},
-    {"id":15,"category":"drone","imgUrl":"../img/drone (15).jpg","title":"Drone shot of drone"},
-    {"id":16,"category":"drone","imgUrl":"../img/drone (16).jpg","title":"Drone shot of drone"},
-    {"id":17,"category":"drone","imgUrl":"../img/drone (17).JPG","title":"Drone shot of drone"},
-
-
-    {"id":18,"category":"nature","imgUrl":"../img/nature (1).jpg","title":"The natural photos"},
-    {"id":19,"category":"nature","imgUrl":"../img/nature (2).jpg","title":"The natural photos"},
-    {"id":20,"category":"nature","imgUrl":"../img/nature (3).jpg","title":"The natural photos"},
-    {"id":21,"category":"nature","imgUrl":"../img/nature (4).jpg","title":"The natural photos"},
-    {"id":22,"category":"nature","imgUrl":"../img/nature (5).JPG","title":"The natural photos"},
-    {"id":23,"category":"nature","imgUrl":"../img/nature (6).JPG","title":"The natural photos"},
-    {"id":24,"category":"nature","imgUrl":"../img/nature (7).JPG","title":"The natural photos"},
-    {"id":25,"category":"nature","imgUrl":"../img/nature (8).jpg","title":"The natural photos"},
-    {"id":26,"category":"nature","imgUrl":"../img/nature (9).jpg","title":"The natural photos"},
-    {"id":27,"category":"nature","imgUrl":"../img/nature (10).jpg","title":"The natural photos"},
-    {"id":28,"category":"nature","imgUrl":"../img/nature (11).JPG","title":"The natural photos"},
-    {"id":29,"category":"nature","imgUrl":"../img/nature (12).jpg","title":"The natural photos"},
-    {"id":30,"category":"nature","imgUrl":"../img/nature (13).JPG","title":"The natural photos"},
-    {"id":31,"category":"nature","imgUrl":"../img/nature (14).jpg","title":"The natural photos"},
-    {"id":32,"category":"nature","imgUrl":"../img/nature (15).jpg","title":"The natural photos"},
-    {"id":33,"category":"nature","imgUrl":"../img/nature (16).jpg","title":"The natural photos"},
-    {"id":34,"category":"nature","imgUrl":"../img/nature (17).JPG","title":"The natural photos"},
-    {"id":35,"category":"nature","imgUrl":"../img/nature (18).jpg","title":"The natural photos"},
-
-
-
-
-
-
-
-
-
-
-    {"id":2,"category":"portrait","imgUrl":"","title":"Vibrant holud night"},
-    {"id":6,"category":"event","imgUrl":"","title":"Dynamic event coverage"},
-    {"id":7,"category":"wedding","imgUrl":"","title":"Festive party moments"}
+    {"id":1,"category":"drone",    "imgUrl":"../img/drone (1).webp","title":"Drone shot of drone"},
+    {"id":2,"category":"drone",    "imgUrl":"../img/drone (2).webp","title":"Drone shot of drone"},
+    {"id":3,"category":"drone",    "imgUrl":"../img/drone (3).webp","title":"Drone shot of drone"},
+    {"id":4,"category":"drone",    "imgUrl":"../img/drone (4).webp","title":"Drone shot of drone"},
+    {"id":5,"category":"drone",    "imgUrl":"../img/drone (5).webp","title":"Drone shot of drone"},
+    {"id":6,"category":"drone",    "imgUrl":"../img/drone (6).webp","title":"Drone shot of drone"},
+    {"id":7,"category":"drone",    "imgUrl":"../img/drone (7).webp","title":"Drone shot of drone"},
+    {"id":8,"category":"drone",    "imgUrl":"../img/drone (8).webp","title":"Drone shot of drone"},
+    {"id":9,"category":"drone",    "imgUrl":"../img/drone (9).webp","title":"Drone shot of drone"},
+    {"id":10,"category":"drone",  "imgUrl":"../img/drone (10).webp","title":"Drone shot of drone"},
+    {"id":11,"category":"drone",  "imgUrl":"../img/drone (11).webp","title":"Drone shot of drone"},
+    {"id":12,"category":"drone",  "imgUrl":"../img/drone (12).webp","title":"Drone shot of drone"},
+    {"id":13,"category":"drone",  "imgUrl":"../img/drone (13).webp","title":"Drone shot of drone"},
+    {"id":14,"category":"drone",  "imgUrl":"../img/drone (14).webp","title":"Drone shot of drone"},
+    {"id":15,"category":"drone",  "imgUrl":"../img/drone (15).webp","title":"Drone shot of drone"},
+    {"id":16,"category":"drone",  "imgUrl":"../img/drone (16).webp","title":"Drone shot of drone"},
+    {"id":17,"category":"drone",  "imgUrl":"../img/drone (17).webp","title":"Drone shot of drone"},
+    {"id":18,"category":"nature", "imgUrl":"../img/nature (1).webp","title":"The natural photos"},
+    {"id":19,"category":"nature", "imgUrl":"../img/nature (2).webp","title":"The natural photos"},
+    {"id":20,"category":"nature", "imgUrl":"../img/nature (3).webp","title":"The natural photos"},
+    {"id":21,"category":"nature", "imgUrl":"../img/nature (4).webp","title":"The natural photos"},
+    {"id":22,"category":"nature", "imgUrl":"../img/nature (5).webp","title":"The natural photos"},
+    {"id":23,"category":"nature", "imgUrl":"../img/nature (6).webp","title":"The natural photos"},
+    {"id":24,"category":"nature", "imgUrl":"../img/nature (7).webp","title":"The natural photos"},
+    {"id":25,"category":"nature", "imgUrl":"../img/nature (8).webp","title":"The natural photos"},
+    {"id":26,"category":"nature", "imgUrl":"../img/nature (9).webp","title":"The natural photos"},
+    {"id":27,"category":"nature","imgUrl":"../img/nature (10).webp","title":"The natural photos"},
+    {"id":28,"category":"nature","imgUrl":"../img/nature (11).webp","title":"The natural photos"},
+    {"id":29,"category":"nature","imgUrl":"../img/nature (12).webp","title":"The natural photos"},
+    {"id":30,"category":"nature","imgUrl":"../img/nature (13).webp","title":"The natural photos"},
+    {"id":31,"category":"nature","imgUrl":"../img/nature (14).webp","title":"The natural photos"},
+    {"id":32,"category":"nature","imgUrl":"../img/nature (15).webp","title":"The natural photos"},
+    {"id":33,"category":"nature","imgUrl":"../img/nature (16).webp","title":"The natural photos"},
+    {"id":34,"category":"nature","imgUrl":"../img/nature (17).webp","title":"The natural photos"},
+    {"id":35,"category":"nature","imgUrl":"../img/nature (18).webp","title":"The natural photos"}
 ]
