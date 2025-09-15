@@ -141,7 +141,7 @@ nav {
 .burger div {
     width: 25px;
     height: 3px;
-    background: white;
+    background: red;
     margin: 5px;
     transition: all 0.3s ease;
 }
