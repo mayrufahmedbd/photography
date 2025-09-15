@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
             div.className = `gallery-item`;
             div.setAttribute('data-category', item.category);
             div.innerHTML = `
-                <a href="${item.imgUrl}" data-lightbox="gallery" data-title="${item.title}">
+                <a href="${item.imgUrl}"  data-lightbox="gallery" data-title="${item.title}" target="_blank">
                     <img src="${item.imgUrl}"loading="lazy" alt="${item.title}">
                 </a>
                 <p>${item.title}</p>
