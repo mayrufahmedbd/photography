@@ -145,7 +145,7 @@ nav a:hover {
 .burger div {
     width: 25px;
     height: 3px;
-    background: red;
+    background: var(--accent-color);
     margin: 5px;
     transition: all 0.3s ease;
 }
