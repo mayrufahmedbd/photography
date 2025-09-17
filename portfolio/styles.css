@@ -209,7 +209,7 @@ nav a:hover {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 10px;
 }
 
@@ -217,7 +217,11 @@ nav a:hover {
     position: relative;
     overflow: hidden;
     border-radius: 5px;
+    transition: transform 0.5s ease;
     height: 200px;
+}
+.gallery-item:hover {    
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 
 .gallery-item img {
