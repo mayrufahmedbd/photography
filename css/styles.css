@@ -688,9 +688,9 @@ footer {
 .footer-heading::after {
     content: '';
     position: absolute;
-    left: 0;
+    left: 36%;
     bottom: 0;
-    width: 50px;
+    width: 60px;
     height: 2px;
     background: var(--accent-color);
 }
