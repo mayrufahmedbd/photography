@@ -161,7 +161,7 @@ function closeLightbox() {
   lightbox.classList.remove('active');
   document.body.style.overflow = '';
   document.body.style.position = '';
-  window.scrollTo(0, scrollY);
+  window.scrollTo(0,    scrollY); // Restore scroll position
 }
 
 closeBtn.addEventListener('click', closeLightbox);
