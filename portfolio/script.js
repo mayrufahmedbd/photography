@@ -117,6 +117,10 @@ window.addEventListener('load', function () {
 
 
 
+
+
+
+
 // --- Fullscreen Custom Lightbox with Scroll Lock Fix (Final Stable Version) ---
 
 // Create lightbox once
