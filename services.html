@@ -12,6 +12,11 @@
 
 <body>
     <header id="header"></header>
+    <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
 
     <section id="services" class="services">
         <div class="container">
@@ -61,26 +66,26 @@
     <script>
         // Load header
         fetch("/ui/header.html")
-        .then(res => res.text())
-        .then(data => document.getElementById("header").innerHTML = data);
-        
+            .then(res => res.text())
+            .then(data => document.getElementById("header").innerHTML = data);
+
         // Load footer
         fetch("/ui/footer.html")
-        .then(res => res.text())
-        .then(data => document.getElementById("footer").innerHTML = data);
+            .then(res => res.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
 
         // Loader functionality
         // Wait for the page to fully load
-window.addEventListener('load', function() {
-    const loader = document.getElementById('loader');
-    const content = document.getElementById('content');
+        window.addEventListener('load', function () {
+            const loader = document.getElementById('loader');
+            const content = document.getElementById('content');
 
-    // Hide the loader
-    loader.style.display = 'none';
+            // Hide the loader
+            loader.style.display = 'none';
 
-    // Show the content
-    content.style.display = 'block';
-});
+            // Show the content
+            content.style.display = 'block';
+        });
     </script>
 </body>
 

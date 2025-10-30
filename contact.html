@@ -9,13 +9,19 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="img/Nazmul Photography Logo.png">
 </head>
-<div id="loader" class="div-loader">
-    <div class="loader"></div>
-</div>
-<div id="content" style="display:none;">
 
-    <body>
+<body>
+    <div id="loader" class="div-loader">
+        <div class="loader"></div>
+    </div>
+    <div id="content" style="display:none;">
+
         <header id="header"></header>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
 
         <section id="contact" class="contact">
             <div class="container">
@@ -72,34 +78,34 @@
             </div>
         </section>
 
-        <footer id="footer">        </footer>
+        <footer id="footer"> </footer>
 
         <script src="js/script.js"></script>
-            <script>
-        // Load header
-        fetch("/ui/header.html")
-        .then(res => res.text())
-        .then(data => document.getElementById("header").innerHTML = data);
-        
-        // Load footer
-        fetch("/ui/footer.html")
-        .then(res => res.text())
-        .then(data => document.getElementById("footer").innerHTML = data);
+        <script>
+            // Load header
+            fetch("/ui/header.html")
+                .then(res => res.text())
+                .then(data => document.getElementById("header").innerHTML = data);
 
-        // Loader functionality
-        // Wait for the page to fully load
-window.addEventListener('load', function() {
-    const loader = document.getElementById('loader');
-    const content = document.getElementById('content');
+            // Load footer
+            fetch("/ui/footer.html")
+                .then(res => res.text())
+                .then(data => document.getElementById("footer").innerHTML = data);
 
-    // Hide the loader
-    loader.style.display = 'none';
+            // Loader functionality
+            // Wait for the page to fully load
+            window.addEventListener('load', function () {
+                const loader = document.getElementById('loader');
+                const content = document.getElementById('content');
 
-    // Show the content
-    content.style.display = 'block';
-});
-    </script>
-    </body>
-</div>
+                // Hide the loader
+                loader.style.display = 'none';
+
+                // Show the content
+                content.style.display = 'block';
+            });
+        </script>
+    </div>
+</body>
 
 </html>

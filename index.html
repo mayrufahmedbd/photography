@@ -9,31 +9,39 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="img/Nazmul Photography Logo.png">
 
-<!-- Meta Description -->
-<meta name="description" content="Nazmul Photography | Professional wedding, event, portrait, and commercial photography in Sylhet, Bangladesh. Capturing your special moments with creativity, passion, and modern techniques. Book your session today.">
+    <!-- Meta Description -->
+    <meta name="description"
+        content="Nazmul Photography | Professional wedding, event, portrait, and commercial photography in Sylhet, Bangladesh. Capturing your special moments with creativity, passion, and modern techniques. Book your session today.">
 
-<!-- Meta Keywords -->
-<meta name="keywords" content="Nazmul Photography, Photography Sylhet, Wedding Photography Sylhet, Event Photography Bangladesh, Portrait Photography Sylhet, Drone Photography Bangladesh, Cultural Photography, Professional Photographer Bangladesh, Holud Night Photography, Aerial Photography Sylhet, Bangladesh Wedding Photographer">
+    <!-- Meta Keywords -->
+    <meta name="keywords"
+        content="Nazmul Photography, Photography Sylhet, Wedding Photography Sylhet, Event Photography Bangladesh, Portrait Photography Sylhet, Drone Photography Bangladesh, Cultural Photography, Professional Photographer Bangladesh, Holud Night Photography, Aerial Photography Sylhet, Bangladesh Wedding Photographer">
 
     <meta name="google-site-verification" content="_VgVDOJMwFJrwTy9nz8yWZWtGKMLCpt-tvl9R7PldKE" />
-<!-- analetics -->
+    <!-- analetics -->
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VQH9SN3R65"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQH9SN3R65"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-VQH9SN3R65');
-</script>
+        gtag('config', 'G-VQH9SN3R65');
+    </script>
 </head>
+
 <body>
-<div id="loader" class="div-loader">
-    <div class="loader"></div>
-</div>
-<div id="content" style="display:none;">
+    <div id="loader" class="div-loader">
+        <div class="loader"></div>
+    </div>
+    <div id="content" style="display:none;">
 
         <header id="header"></header>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
 
         <section id="home" class="hero">
             <div class="hero-content">
@@ -59,32 +67,32 @@
         <footer id="footer"></footer>
 
     </div>
-        <script src="js/script.js"></script>
-            <script>
+    <script src="js/script.js"></script>
+    <script>
         // Load header
         fetch("/ui/header.html")
-        .then(res => res.text())
-        .then(data => document.getElementById("header").innerHTML = data);
-        
+            .then(res => res.text())
+            .then(data => document.getElementById("header").innerHTML = data);
+
         // Load footer
         fetch("/ui/footer.html")
-        .then(res => res.text())
-        .then(data => document.getElementById("footer").innerHTML = data);
+            .then(res => res.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
 
         // Loader functionality
         // Wait for the page to fully load
-window.addEventListener('load', function() {
-    const loader = document.getElementById('loader');
-    const content = document.getElementById('content');
+        window.addEventListener('load', function () {
+            const loader = document.getElementById('loader');
+            const content = document.getElementById('content');
 
-    // Hide the loader
-    loader.style.display = 'none';
+            // Hide the loader
+            loader.style.display = 'none';
 
-    // Show the content
-    content.style.display = 'block';
-});
+            // Show the content
+            content.style.display = 'block';
+        });
     </script>
-        
-    </body>
+
+</body>
 
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,84 +13,88 @@
     <div class="loader"></div>
 </div>
 <div id="content" style="display:none;">
-<body>
-    <header id="header"></header>
 
-    <section class="achievements">
-        <div class="container">
-            <h2>Achievements</h2>
-            <p>Over the years, Nazmul Photography has earned recognition for excellence in various categories, including international awards and publications. These milestones reflect our commitment to quality and innovation in the field.</p>
-            <div class="achievements-grid">
-                <div class="fb-post"><iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fnazmulislamkanaighatsylhet%2Fposts%2Fpfbid02hsbXNcrg8qFFHTBkNhAPJzJaJdCBUaHH5TakZpZGtSFNRBsHwwoP7N2mc36zxzpgl&show_text=true&width=500"
-                    width="100%"
-                    height="700"
-                    style="border:none;overflow:hidden"
-                    scrolling="no"
-                    frameborder="0"
-                    allowfullscreen
-                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-                </iframe></div>
-                <div class="achievement-card">
-                    <div class="achievement-content">
-                        <h3>International Photography Award</h3>
-                        <p class="achievement-meta">Natural Photography Category</p>
-                        <p>6 Gold Medal Award Received in December 2024 From Phoenix International Photography Exhibition</p>
-                    </div>
-                    <div class="achievement-year">2024</div>
-
-                </div>
-            </div>
-
-            <div class="achievements-grid">
-                <div class="fb-post"><iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2F100017930506080%2Fposts%2F1455674718373531%2F&show_text=true&width=500"
-                    width="100%"
-                    height="700"
-                    style="border:none;overflow:hidden"
-                    scrolling="no"
-                    frameborder="0"
-                    allowfullscreen
-                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-                </iframe></div>
-                <div class="achievement-card">
-                    <div class="achievement-content">
-                        <h3>National Photography Award</h3>
-                        <p class="achievement-meta">Natural Photography Category</p>
-                        <p>Gold medal award received from Phoenix National Photography Planet award 2024</p>
-                    </div>
-                    <div class="achievement-year">2024</div>
-
-                </div>
-            </div>
+    <body>
+        <header id="header"></header>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
         </div>
-    </section>
 
-    <footer id="footer"></footer>
+        <section class="achievements">
+            <div class="container">
+                <h2>Achievements</h2>
+                <p>Over the years, Nazmul Photography has earned recognition for excellence in various categories,
+                    including international awards and publications. These milestones reflect our commitment to quality
+                    and innovation in the field.</p>
+                <div class="achievements-grid">
+                    <div class="fb-post"><iframe
+                            src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fnazmulislamkanaighatsylhet%2Fposts%2Fpfbid02hsbXNcrg8qFFHTBkNhAPJzJaJdCBUaHH5TakZpZGtSFNRBsHwwoP7N2mc36zxzpgl&show_text=true&width=500"
+                            width="100%" height="700" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                            allowfullscreen
+                            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                        </iframe></div>
+                    <div class="achievement-card">
+                        <div class="achievement-content">
+                            <h3>International Photography Award</h3>
+                            <p class="achievement-meta">Natural Photography Category</p>
+                            <p>6 Gold Medal Award Received in December 2024 From Phoenix International Photography
+                                Exhibition</p>
+                        </div>
+                        <div class="achievement-year">2024</div>
 
-    <script src="script.js"></script>
+                    </div>
+                </div>
+
+                <div class="achievements-grid">
+                    <div class="fb-post"><iframe
+                            src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2F100017930506080%2Fposts%2F1455674718373531%2F&show_text=true&width=500"
+                            width="100%" height="700" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                            allowfullscreen
+                            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                        </iframe></div>
+                    <div class="achievement-card">
+                        <div class="achievement-content">
+                            <h3>National Photography Award</h3>
+                            <p class="achievement-meta">Natural Photography Category</p>
+                            <p>Gold medal award received from Phoenix National Photography Planet award 2024</p>
+                        </div>
+                        <div class="achievement-year">2024</div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer id="footer"></footer>
+
+        <script src="script.js"></script>
         <script>
-        // Load header
-        fetch("../ui/header.html")
-        .then(res => res.text())
-        .then(data => document.getElementById("header").innerHTML = data);
-        
-        // Load footer
-        fetch("../ui/footer.html")
-        .then(res => res.text())
-        .then(data => document.getElementById("footer").innerHTML = data);
+            // Load header
+            fetch("../ui/header.html")
+                .then(res => res.text())
+                .then(data => document.getElementById("header").innerHTML = data);
 
-        // Loader functionality
-        // Wait for the page to fully load
-window.addEventListener('load', function() {
-    const loader = document.getElementById('loader');
-    const content = document.getElementById('content');
+            // Load footer
+            fetch("../ui/footer.html")
+                .then(res => res.text())
+                .then(data => document.getElementById("footer").innerHTML = data);
 
-    // Hide the loader
-    loader.style.display = 'none';
+            // Loader functionality
+            // Wait for the page to fully load
+            window.addEventListener('load', function () {
+                const loader = document.getElementById('loader');
+                const content = document.getElementById('content');
 
-    // Show the content
-    content.style.display = 'block';
-});
-    </script>
-</body>
+                // Hide the loader
+                loader.style.display = 'none';
+
+                // Show the content
+                content.style.display = 'block';
+            });
+        </script>
+    </body>
 </div>
+
 </html>
