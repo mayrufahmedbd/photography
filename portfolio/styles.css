@@ -87,12 +87,15 @@ section {
 
 /* Header & Navigation */
 header {
-    /* background: rgba(0, 0, 0, 0.1); */
+    background: rgba(0, 0, 0, 0.02);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    position: fixed;
+    position: sticky;
     width: 100%;
+    height: auto;
     z-index: 1000;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
+    /* background: red; */
+    top: 0;
 }
 
 nav {
@@ -212,7 +215,7 @@ nav a:hover {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 10px;
 }
 
@@ -221,7 +224,7 @@ nav a:hover {
     overflow: hidden;
     border-radius: 5px;
     transition: transform 0.5s ease;
-    height: 250px;
+    height: 200px;
 }
 
 .gallery-item:hover {
@@ -261,6 +264,62 @@ nav a:hover {
 .overlay i {
     color: #fff;
     font-size: 2rem;
+}
+
+
+
+
+
+
+
+
+
+/* Lightbox Container */
+.lightbox {
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+}
+
+/* Active State */
+.lightbox.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Image Fullscreen */
+.lightbox img {
+  max-width: 95vw;
+  max-height: 95vh;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.6);
+}
+
+/* Close Button */
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 38px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.lightbox-close:hover {
+  transform: scale(1.2);
+  color: #f0c040;
 }
 
 
