@@ -180,15 +180,20 @@ if (newsletterForm) {
 }
 
 
-// Loader functionality
-        // Wait for the page to fully load
-window.addEventListener('load', function() {
-    const loader = document.getElementById('loader');
-    const content = document.getElementById('content');
 
-    // Hide the loader
-    loader.style.display = 'none';
 
-    // Show the content
-    content.style.display = 'block';
-});
+
+
+
+
+// header and footer 
+
+        // Load header
+        fetch("/ui/header.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("header").innerHTML = data);
+
+        // Load footer
+        fetch("/ui/footer.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("footer").innerHTML = data);

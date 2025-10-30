@@ -266,62 +266,6 @@ nav a:hover {
 
 
 
-
-
-
-
-
-/* Lightbox Container */
-.lightbox {
-  position: sticky;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0,0,0,0.95);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease;
-  z-index: 9999;
-}
-
-/* Active State */
-.lightbox.active {
-  opacity: 1;
-  visibility: visible;
-}
-
-/* Image Fullscreen */
-.lightbox img {
-  max-width: 95vw;
-  max-height: 95vh;
-  object-fit: contain;
-  border-radius: 10px;
-  box-shadow: 0 0 30px rgba(0,0,0,0.6);
-}
-
-/* Close Button */
-.lightbox-close {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  color: white;
-  font-size: 50px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: transform 0.2s ease, color 0.2s ease;
-}
-
-.lightbox-close:hover {
-  transform: scale(1.2);
-  color: #f0c040;
-}
-
-
-
-
 /* Services Section */
 .services-grid {
     display: grid;
