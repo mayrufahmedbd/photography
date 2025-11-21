@@ -9,56 +9,56 @@
     {
         "id": 2,
         "category": "drone",
-        "imgUrl": "../img/drone (4).webp",
+        "imgUrl": "../img/drone (2).webp",
         "thumbnail": "../img/thumbnail/drone (2).jpeg",
         "title": "Drone shot of drone"
     },
     {
         "id": 3,
         "category": "drone",
-        "imgUrl": "../img/drone (10).webp",
+        "imgUrl": "../img/drone (3).webp",
         "thumbnail": "../img/thumbnail/drone (3).jpeg",
         "title": "Drone shot of drone"
     },
     {
         "id": 4,
         "category": "drone",
-        "imgUrl": "../img/drone (15).webp",
+        "imgUrl": "../img/drone (4).webp",
         "thumbnail": "../img/thumbnail/drone (4).jpeg",
         "title": "Drone shot of drone"
     },
     {
         "id": 5,
         "category": "nature",
-        "imgUrl": "../img/nature (4).webp",
+        "imgUrl": "../img/nature (1).webp",
         "thumbnail": "../img/thumbnail/nature (1).jpeg",
         "title": "The natural photos"
     },
     {
         "id": 6,
         "category": "nature",
-        "imgUrl": "../img/nature (5).webp",
+        "imgUrl": "../img/nature (2).webp",
         "thumbnail": "../img/thumbnail/nature (2).jpeg",
         "title": "The natural photos"
     },
     {
         "id": 7,
         "category": "nature",
-        "imgUrl": "../img/nature (6).webp",
+        "imgUrl": "../img/nature (3).webp",
         "thumbnail": "../img/thumbnail/nature (3).jpeg",
         "title": "The natural photos"
     },
     {
         "id": 8,
         "category": "nature",
-        "imgUrl": "../img/nature (11).webp",
+        "imgUrl": "../img/nature (4).webp",
         "thumbnail": "../img/thumbnail/nature (4).jpeg",
         "title": "The natural photos"
     },
     {
         "id": 9,
         "category": "nature",
-        "imgUrl": "../img/nature (13).webp",
+        "imgUrl": "../img/nature (5).webp",
         "thumbnail": "../img/thumbnail/nature (5).jpeg",
         "title": "The natural photos"
     }
