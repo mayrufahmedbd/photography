@@ -3,54 +3,63 @@
         "id": 1,
         "category": "drone",
         "imgUrl": "../img/drone (1).webp",
+        "thumbnail": "../img/thumbnail/drone (1).jpeg",
+        "title": "Drone shot of drone"
+    },
+    {
+        "id": 2,
+        "category": "drone",
+        "imgUrl": "../img/drone (4).webp",
+        "thumbnail": "../img/thumbnail/drone (2).jpeg",
+        "title": "Drone shot of drone"
+    },
+    {
+        "id": 3,
+        "category": "drone",
+        "imgUrl": "../img/drone (10).webp",
+        "thumbnail": "../img/thumbnail/drone (3).jpeg",
         "title": "Drone shot of drone"
     },
     {
         "id": 4,
         "category": "drone",
-        "imgUrl": "../img/drone (4).webp",
-        "title": "Drone shot of drone"
-    },
-    {
-        "id": 10,
-        "category": "drone",
-        "imgUrl": "../img/drone (10).webp",
-        "title": "Drone shot of drone"
-    },
-    {
-        "id": 15,
-        "category": "drone",
         "imgUrl": "../img/drone (15).webp",
+        "thumbnail": "../img/thumbnail/drone (4).jpeg",
         "title": "Drone shot of drone"
     },
     {
-        "id": 21,
+        "id": 5,
         "category": "nature",
         "imgUrl": "../img/nature (4).webp",
+        "thumbnail": "../img/thumbnail/nature (1).jpeg",
         "title": "The natural photos"
     },
     {
-        "id": 22,
+        "id": 6,
         "category": "nature",
         "imgUrl": "../img/nature (5).webp",
+        "thumbnail": "../img/thumbnail/nature (2).jpeg",
         "title": "The natural photos"
     },
     {
-        "id": 23,
+        "id": 7,
         "category": "nature",
         "imgUrl": "../img/nature (6).webp",
+        "thumbnail": "../img/thumbnail/nature (3).jpeg",
         "title": "The natural photos"
     },
     {
-        "id": 28,
+        "id": 8,
         "category": "nature",
         "imgUrl": "../img/nature (11).webp",
+        "thumbnail": "../img/thumbnail/nature (4).jpeg",
         "title": "The natural photos"
     },
     {
-        "id": 30,
+        "id": 9,
         "category": "nature",
         "imgUrl": "../img/nature (13).webp",
+        "thumbnail": "../img/thumbnail/nature (5).jpeg",
         "title": "The natural photos"
     }
 ]
