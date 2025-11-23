@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
             div.setAttribute('data-category', item.category);
             div.innerHTML = `
                 <a href="${item.imgUrl}" data-lightbox="gallery" data-title="${item.title}">
-                    <img src="${item.thumbnail}"loading="lazy" alt="${item.title}">
+                    <img src="${item.thumbnail}" loading="lazy" alt="${item.title}">
                 </a>
                 <p>${item.title}</p>
             `;
@@ -89,85 +89,86 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-
-// Loader functionality
-// Wait for the page to fully load
+// Loader for full page
 window.addEventListener('load', function () {
     const loader = document.getElementById('loader');
     const content = document.getElementById('content');
 
-    // Hide the loader
     loader.style.display = 'none';
-
-    // Show the content
     content.style.display = 'block';
 });
 
 
 
 
+// =============================================================
+// ⭐ FULLSCREEN CUSTOM LIGHTBOX + COLORFUL LOADER (FINAL VERSION)
+// =============================================================
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// --- Fullscreen Custom Lightbox with Scroll Lock Fix (Final Stable Version) ---
-
-// Create lightbox once
+// Create Lightbox container only once
 let lightbox = document.querySelector('.lightbox');
 if (!lightbox) {
-  lightbox = document.createElement('div');
-  lightbox.className = 'lightbox';
-  lightbox.innerHTML = `<span class="lightbox-close">&times;</span><img src="" alt="">`;
-  document.body.appendChild(lightbox);
+    lightbox = document.createElement('div');
+    lightbox.className = 'lightbox';
+    lightbox.innerHTML = `
+        <div class="lightbox-loader"></div>
+        <span class="lightbox-close">&times;</span>
+        <img src="" alt="">
+    `;
+    document.body.appendChild(lightbox);
 }
 
 const lightboxImg = lightbox.querySelector('img');
 const closeBtn = lightbox.querySelector('.lightbox-close');
+const loaderSpinner = lightbox.querySelector('.lightbox-loader');
 
-let scrollY = 0; // store scroll position
+let scrollY = 0;
 
 // --- Open Lightbox ---
 document.body.addEventListener('click', e => {
-  const link = e.target.closest('.gallery-item a');
-  if (link) {
-    e.preventDefault();
+    const link = e.target.closest('.gallery-item a');
+    if (link) {
+        e.preventDefault();
 
-    const imgUrl = link.href;
-    lightboxImg.src = imgUrl;
-    lightbox.classList.add('active');
+        const imgUrl = link.href;
 
-    // Save current scroll position
-    scrollY = window.scrollY;
+        // Reset loader
+        loaderSpinner.style.display = 'block';
+        lightboxImg.style.opacity = '0';
 
-    // Freeze scroll (without reposition issues)
-    document.body.style.overflow = 'hidden';
-    document.body.style.position = 'relative';
-  }
+        lightbox.classList.add('active');
+
+        scrollY = window.scrollY;
+
+        document.body.style.overflow = 'hidden';
+        document.body.style.position = 'relative';
+
+        // Preload new image
+        const tempImage = new Image();
+        tempImage.src = imgUrl;
+
+        tempImage.onload = () => {
+            lightboxImg.src = imgUrl;
+            loaderSpinner.style.display = 'none';
+            lightboxImg.style.opacity = '1';
+        };
+    }
 });
 
 // --- Close Lightbox ---
 function closeLightbox() {
-  lightbox.classList.remove('active');
-  document.body.style.overflow = '';
-  document.body.style.position = '';
-  window.scrollTo(0,    scrollY); // Restore scroll position
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+    document.body.style.position = '';
+    window.scrollTo(0, scrollY);
 }
 
 closeBtn.addEventListener('click', closeLightbox);
+
 lightbox.addEventListener('click', e => {
-  if (e.target === lightbox) closeLightbox();
+    if (e.target === lightbox) closeLightbox();
 });
+
 window.addEventListener('keydown', e => {
-  if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'Escape') closeLightbox();
 });
