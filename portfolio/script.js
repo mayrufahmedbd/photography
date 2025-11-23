@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // ============================
     // Mobile Navigation
+    // ============================
     const burger = document.querySelector('.burger');
     const navLinks = document.querySelector('.nav-links');
     const navItems = document.querySelectorAll('.nav-links li');
@@ -12,7 +14,9 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Portfolio
+    // ============================
+    // Portfolio Gallery
+    // ============================
     const filterButtons = document.querySelectorAll('.filter-btn');
     const gallery = document.querySelector('.gallery');
 
@@ -28,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
             div.className = `gallery-item`;
             div.setAttribute('data-category', item.category);
             div.innerHTML = `
-                <a href="${item.imgUrl}" data-lightbox="gallery" data-title="${item.title}">
+                <a href="${item.imgUrl}" data-title="${item.title}">
                     <img src="${item.thumbnail}" loading="lazy" alt="${item.title}">
                 </a>
                 <p>${item.title}</p>
@@ -39,42 +43,59 @@ document.addEventListener('DOMContentLoaded', function () {
 
     fetchGalleryData().then(data => {
         renderGallery(data);
+
         filterButtons.forEach(btn => {
             btn.addEventListener('click', () => {
                 filterButtons.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
-                const filtered = btn.dataset.filter === 'all' ? data : data.filter(d => d.category === btn.dataset.filter);
+
+                const filtered =
+                    btn.dataset.filter === 'all'
+                        ? data
+                        : data.filter(d => d.category === btn.dataset.filter);
+
                 renderGallery(filtered);
+                updateGalleryLinks(); // refresh links after filter
             });
         });
     });
 
-    // Achievements stats
+    // ============================
+    // Achievement Stats Animation
+    // ============================
     function animateStats() {
         const stats = document.querySelectorAll('.stat-number');
         stats.forEach(stat => {
             const target = parseInt(stat.getAttribute('data-count'));
             let current = 0;
             const step = target / (2000 / 16);
+
             const counter = setInterval(() => {
                 current += step;
-                if (current >= target) { current = target; clearInterval(counter); }
+                if (current >= target) {
+                    current = target;
+                    clearInterval(counter);
+                }
                 stat.textContent = Math.floor(current);
             }, 16);
         });
     }
 
     const achievementsSection = document.querySelector('.achievements');
-    new IntersectionObserver(entries => {
+    const achievementsSectionObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 animateStats();
                 achievementsSectionObserver.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.5 }).observe(achievementsSection);
+    }, { threshold: 0.5 });
 
-    // Footer animation
+    achievementsSectionObserver.observe(achievementsSection);
+
+    // ============================
+    // Footer Animation
+    // ============================
     const footer = document.querySelector('.footer');
     new IntersectionObserver(entries => {
         entries.forEach(entry => {
@@ -84,12 +105,15 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }, { threshold: 0.1 }).observe(footer);
 
-    // Current year
+    // ============================
+    // Set Current Year
+    // ============================
     document.getElementById('year').textContent = new Date().getFullYear();
 });
 
-
-// Loader for full page
+// ============================
+// Full Page Loader
+// ============================
 window.addEventListener('load', function () {
     const loader = document.getElementById('loader');
     const content = document.getElementById('content');
@@ -98,14 +122,9 @@ window.addEventListener('load', function () {
     content.style.display = 'block';
 });
 
-
-
-
 // =============================================================
-// ⭐ FULLSCREEN CUSTOM LIGHTBOX + COLORFUL LOADER (FINAL VERSION)
+// ⭐ FULLSCREEN CUSTOM LIGHTBOX + COLORFUL LOADER
 // =============================================================
-
-// Create Lightbox container only once
 let lightbox = document.querySelector('.lightbox');
 if (!lightbox) {
     lightbox = document.createElement('div');
@@ -124,42 +143,35 @@ const loaderSpinner = lightbox.querySelector('.lightbox-loader');
 
 let scrollY = 0;
 
-// --- Open Lightbox ---
+// ============================
+// OPEN LIGHTBOX
+// ============================
 document.body.addEventListener('click', e => {
     const link = e.target.closest('.gallery-item a');
     if (link) {
         e.preventDefault();
 
-        const imgUrl = link.href;
+        updateGalleryLinks(); // update index list
 
-        // Reset loader
+        scrollY = window.scrollY;
+        currentIndex = galleryLinks.indexOf(link);
+
         loaderSpinner.style.display = 'block';
         lightboxImg.style.opacity = '0';
 
         lightbox.classList.add('active');
-
-        scrollY = window.scrollY;
-
         document.body.style.overflow = 'hidden';
-        document.body.style.position = 'relative';
 
-        // Preload new image
-        const tempImage = new Image();
-        tempImage.src = imgUrl;
-
-        tempImage.onload = () => {
-            lightboxImg.src = imgUrl;
-            loaderSpinner.style.display = 'none';
-            lightboxImg.style.opacity = '1';
-        };
+        showImageByIndex(currentIndex);
     }
 });
 
-// --- Close Lightbox ---
+// ============================
+// CLOSE LIGHTBOX
+// ============================
 function closeLightbox() {
     lightbox.classList.remove('active');
     document.body.style.overflow = '';
-    document.body.style.position = '';
     window.scrollTo(0, scrollY);
 }
 
@@ -171,4 +183,77 @@ lightbox.addEventListener('click', e => {
 
 window.addEventListener('keydown', e => {
     if (e.key === 'Escape') closeLightbox();
+});
+
+// =============================================================
+// ⭐ IMAGE SLIDING WITH ARROWS + KEYBOARD + SWIPE
+// =============================================================
+let galleryLinks = [];
+let currentIndex = 0;
+
+function updateGalleryLinks() {
+    galleryLinks = Array.from(document.querySelectorAll('.gallery-item a'));
+}
+
+// Add arrows
+const prevBtn = document.createElement('div');
+prevBtn.className = 'lightbox-prev';
+prevBtn.innerHTML = '&#10094;';
+
+const nextBtn = document.createElement('div');
+nextBtn.className = 'lightbox-next';
+nextBtn.innerHTML = '&#10095;';
+
+lightbox.appendChild(prevBtn);
+lightbox.appendChild(nextBtn);
+
+// Load image
+function showImageByIndex(index) {
+    if (index < 0) index = galleryLinks.length - 1;
+    if (index >= galleryLinks.length) index = 0;
+
+    currentIndex = index;
+
+    const imgUrl = galleryLinks[index].href;
+
+    loaderSpinner.style.display = 'block';
+    lightboxImg.style.opacity = '0';
+
+    const temp = new Image();
+    temp.src = imgUrl;
+
+    temp.onload = () => {
+        lightboxImg.src = imgUrl;
+        loaderSpinner.style.display = 'none';
+        lightboxImg.style.opacity = '1';
+    };
+}
+
+// Arrow click
+nextBtn.addEventListener('click', () => showImageByIndex(currentIndex + 1));
+prevBtn.addEventListener('click', () => showImageByIndex(currentIndex - 1));
+
+// Keyboard arrows
+window.addEventListener('keydown', e => {
+    if (!lightbox.classList.contains('active')) return;
+
+    if (e.key === 'ArrowRight') showImageByIndex(currentIndex + 1);
+    if (e.key === 'ArrowLeft') showImageByIndex(currentIndex - 1);
+});
+
+// Mobile swipe
+let startX = 0;
+
+lightbox.addEventListener('touchstart', e => {
+    startX = e.touches[0].clientX;
+});
+
+lightbox.addEventListener('touchend', e => {
+    const endX = e.changedTouches[0].clientX;
+
+    if (startX - endX > 50) {
+        showImageByIndex(currentIndex + 1); // swipe left
+    } else if (endX - startX > 50) {
+        showImageByIndex(currentIndex - 1); // swipe right
+    }
 });

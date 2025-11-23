@@ -156,7 +156,7 @@ nav a:hover {
 .hero {
     height: 100vh;
     background: linear-gradient(var(--overlay-color), var(--overlay-color)),
-        url('/img/nature (5).webp') no-repeat center center/cover;
+        url('/img/thumbnail/drone\ \(2\).jpeg') no-repeat center center/cover;
     color: #fff;
     display: flex;
     align-items: center;

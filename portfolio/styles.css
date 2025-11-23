@@ -116,6 +116,34 @@ section {
     opacity: 0;
 }
 
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    top: 50%;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    transform: translateY(-50%);
+    user-select: none;
+    transition: 0.2s;
+    z-index: 99999;
+}
+
+.lightbox-prev {
+    left: 20px;
+}
+
+.lightbox-next {
+    right: 20px;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    transform: translateY(-50%) scale(1.2);
+}
+
+
 /* Header & Navigation */
 header {
     /* background: rgba(0, 0, 0, 0.1); */
