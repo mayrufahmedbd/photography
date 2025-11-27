@@ -135,8 +135,7 @@ nav {
 }
 
 nav a:hover {
-    color: var(--dark-color);
-    text-shadow: 0 0 3px var(--accent-color);
+    text-shadow: 0 0 5px var(--accent-color);
 }
 
 .burger {
@@ -154,7 +153,7 @@ nav a:hover {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    height: 100dvh;
     background: linear-gradient(var(--overlay-color), var(--overlay-color)),
         url('/img/thumbnail/drone\ \(2\).jpeg') no-repeat center center/cover;
     color: #fff;

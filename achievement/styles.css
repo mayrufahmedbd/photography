@@ -136,8 +136,8 @@ nav {
 }
 
 nav a:hover {
-    color: var(--dark-color);
-    text-shadow: 0 0 3px var(--accent-color);
+    text-shadow: 0 0 5px rgba(255, 43, 43, 0.603);
+
 }
 
 .burger {

@@ -194,8 +194,7 @@ nav {
 }
 
 nav a:hover {
-    color: var(--dark-color);
-    text-shadow: 0 0 3px var(--accent-color);
+    text-shadow: 0 0 5px var(--accent-color);
 }
 
 .burger {
